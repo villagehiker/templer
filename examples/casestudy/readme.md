@@ -1,10 +1,26 @@
-# Templer Casestudy for Real-World Website
+# Templer Case Study for Real-World Website
 
-This case study describes the conversion of a 10-year-old hand-coded website to the Templer static-site generator. 
+This case study describes the conversion of a 10-year-old hand-coded website to the Templer static-site generator. The site belongs to [Village Hiker Publishing company](http://villagehiker.com).
 
-## About the Casestudy
+## Assumptions
 
-The original site contained more than 500 pages created during 10 years. While most pages looked similar to the user, the HTML and CSS suffered from inconsistent patching. Many of the pages used different css files to force the HTML and CSS into adaptive and responsive behaviors. Some pages used HTML 4, others used XHTML. More recent ones used HTML 5. Maintenance became a nusiance. The website consisted of text files, images and CSS. It used no javascript. 
+This case study assumes you are familiar with the Templer documentation. It assumes you have an understanding of the configuration file, the include files, the template files, the content files and concepts such as variables.
+
+In summary:
+
+* The Configuration file manages the overall settings for your website. The configuration file can include global variables, such organization name and paths to folders.
+* Template layout files use HTML to define the appearance of the website. A website design can use one or more template files. The Village Hiker site uses one.
+* Include files contain information Templer can includes on multiple pages. Changing information in an include file changes that information wherever Templer includes the file. Village Hiker uses these files for featured articles, external links and advertising content on individual pages.
+* Content files contain articles to display on your webpages. These can be written in HTML, Markdown or other formatting languages.  
+* Variables define changing content used in the template layout and the content pages. Village Hiker uses variables to build its index pages and to define include files to use for each content page. It also uses them for page-specific information, such as the page title, description and meta data requested by social media sites.
+
+## About the Case Study
+
+The author of this case study is the owner and developer of the Village Hiker website. 
+
+The original site contained 550-plus pages. The website consisted of text files, images and CSS. It used no javascript.
+
+While most pages looked similar to the user, the HTML and CSS driving the user-interface suffered from inconsistent patching. Many of the pages used customized CSS files to force the HTML into adaptive and responsive behaviors. Some pages used HTML 4, others used XHTML. More recent ones used HTML 5. The complexity of the site made it difficult to update.
 
 ## Case Study Elements
 
@@ -16,9 +32,46 @@ The case study describes:
 * text input files in HTML and markdown formats
 * images
 
+It briefly highlights the conversion process.
+
 ## Software Versions
 
-The Templer installation uses version 1.2 running on Perl version 5.16.0. Perl was installed on MacOS Sierra using PerlBrew, not touching the system Perl.
+The Templer installation uses version 1.2 running on Perl version 5.16.0. Perl was installed on MacOS Sierra using PerlBrew, with modifying the system Perl.
 
-## File 
+## Website Status
 
+The Templer-created site went online July 28, 2017. It receives updates multiple times each week.
+
+## Website Design
+
+### Website Purpose
+
+The Village Hiker website serves as the business card and web presence of a writing and editing services company specializing in content development. The website provides originally-researched and written content—including documentary-quality photos—on a variety of subjects to illustrate the capabilities of the company. The site contains a small amount of affiliate advertising, plus some Google ads, all separated from the articles.
+
+### Website Sections
+
+In addition to the root homepage level, the website contains five primary sections, each structured into a folder
+
+* About
+* Photos
+* Research-Writing
+* Travel
+* Store
+
+The About, Research-Writing and Travel sections contain subfolders. Some of these folders contains their own subfolders. For example, the Research-Writing folder contains subfolders on topics such as books, nature and writing skills. And the Travel folder includes subfolder on Japan, Taiwan and the USA. 
+
+The root level contains an index.html file, as do most of the content subfolders.
+
+The top level folder and most subfolders also contain css and media subfolders.
+
+### Text-File Naming 
+
+File naming conventions provide for easily changing the featured articles presented on the index.html pages in the sections and subsections. The top-level homepage lists a subset of articles from each section and subsection. These subsets change weekly. The subsection containing their own subsection also list article subsets on their index.html pages. The index.html pages for the lowest level subsection contains a list of all articles in that section. 
+
+Consider travel. The homepage lists a few articles from each travel subsection—such as Japan, Taiwan, USA—plus a link to the travel section. The travel section index.html lists a few articles from each section, plus links to the Japan, Taiwan and USA sections. The index.html pages for Japan, Taiwan and the USA list all articles in those sections. 
+
+blah blah blah
+
+### Banner Images Via CSS
+
+MTC…
