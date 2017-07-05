@@ -36,7 +36,7 @@ It briefly highlights the conversion process.
 
 ## Software Versions
 
-The Templer installation uses version 1.2 running on Perl version 5.16.0. Perl was installed on MacOS Sierra using PerlBrew, with modifying the system Perl.
+The Templer installation uses version 1.2 running on Perl version 5.16.0. Perl was installed on MacOS Sierra using PerlBrew, without modifying the system Perl.
 
 ## Website Status
 
@@ -70,8 +70,5 @@ File naming conventions provide for easily changing the featured articles presen
 
 Consider travel. The homepage lists a few articles from each travel subsection—such as Japan, Taiwan, USA—plus a link to the travel section. The travel section index.html lists a few articles from each section, plus links to the Japan, Taiwan and USA sections. The index.html pages for Japan, Taiwan and the USA list all articles in those sections. 
 
-blah blah blah
-
 ### Banner Images Via CSS
 
-MTC…
