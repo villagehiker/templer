@@ -40,7 +40,7 @@ The Templer installation uses version 1.2 running on Perl version 5.16.0. Perl w
 
 ## Website Status
 
-The Templer-created site went online July 28, 2017. It receives updates multiple times each week.
+The Templer-created site went online July 28, 2017. It receives updates multiple times each week. The development environment is Coda 2 and MacOS Terminal application.
 
 ## Website Design
 
@@ -58,7 +58,7 @@ In addition to the root homepage level, the website contains five primary sectio
 * Travel
 * Store
 
-The About, Research-Writing and Travel sections contain subfolders. Some of these folders contains their own subfolders. For example, the Research-Writing folder contains subfolders on topics such as books, nature and writing skills. And the Travel folder includes subfolder on Japan, Taiwan and the USA. 
+The About, Research-Writing and Travel sections contain subfolders. Some of these folders contains their own subfolders. For example, the Research-Writing folder contains subfolders on topics such as books, nature and writing skills. And the Travel folder includes subfolders on Japan, Taiwan and the USA. 
 
 The root level contains an index.html file, as do most of the content subfolders.
 
@@ -70,5 +70,33 @@ File naming conventions provide for easily changing the featured articles presen
 
 Consider travel. The homepage lists a few articles from each travel subsection—such as Japan, Taiwan, USA—plus a link to the travel section. The travel section index.html lists a few articles from each section, plus links to the Japan, Taiwan and USA sections. The index.html pages for Japan, Taiwan and the USA list all articles in those sections. 
 
+Village Hiker uses file globs to define the files to include. The name convention support file globing.
+
+The naming pattern is:
+
+file-name-related-content-vh-tt-nn, where:
+
+* file-name-related-content describes the content.
+* -vh identifies the file as belonging to the Village Hiker website.
+* -tt identifies the type of content, such as as -ts for travel story and -jn for journal notes. This is optional.
+* -nn provides a number used to glob files for general selection. The site to limit the a number to five or seven files in a section. 
+
+An example is chasing-the-vermilion-torii-wakayama-japan-vh-ts-00, a travel story about Japan.
+
 ### Banner Images Via CSS
+
+Each section uses it own page banner. The banner is defined in a section-specific css file. The overall design includes a variable to define page-specific banners, but this is not currently implemented. 
+
+The current implementation uses a constantly defined section css file specified in the template layout.
+
+## Configuration File
+
+## Template Layout
+
+## Include Files
+
+## Content Files
+
+
+
 
