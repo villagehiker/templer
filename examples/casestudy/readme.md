@@ -66,11 +66,9 @@ The top level folder and most subfolders also contain css and media subfolders.
 
 ### Text-File Naming 
 
-File naming conventions provide for easily changing the featured articles presented on the index.html pages in the sections and subsections. The top-level homepage lists a subset of articles from each section and subsection. These subsets change weekly. The subsection containing their own subsection also list article subsets on their index.html pages. The index.html pages for the lowest level subsection contains a list of all articles in that section. 
+File naming conventions provide for easily changing the featured articles presented on the index.html pages in the sections and subsections. The top-level homepage lists a subset of articles from each section and subsection. These subsets change weekly. The subsections containing their own subsection also list article subsets on their index.html pages. The index.html pages for the lowest level subsection contains a list of all articles in that section. 
 
-Consider travel. The homepage lists a few articles from each travel subsection—such as Japan, Taiwan, USA—plus a link to the travel section. The travel section index.html lists a few articles from each section, plus links to the Japan, Taiwan and USA sections. The index.html pages for Japan, Taiwan and the USA list all articles in those sections. 
-
-Village Hiker uses file globs to define the files to include. The name convention support file globing.
+Consider travel as an example. The homepage lists a few articles from each travel subsection—such as Japan, Taiwan, USA—plus a link to the travel section. The travel section index.html lists a few articles from each section, plus links to the country sections. The index.html pages for each travel section—such as Vietnam and Travel Gear—list all articles in those sections. 
 
 The naming pattern is:
 
@@ -83,6 +81,14 @@ file-name-related-content-vh-tt-nn, where:
 
 An example is chasing-the-vermilion-torii-wakayama-japan-vh-ts-00, a travel story about Japan.
 
+The website uses file globs to define the files to include in each index.html file. The name convention support file globing.
+
+For example, the glob `taiwang: file_glob( travel-taiwan/*jn*.wgn)` includes all Taiwan journal files in the index.
+
+And `vietnamg: file_glob( travel-vietnam/*01.wgn)` includes all Vietnam files endng in 01.
+
+The source content files use the `wgn` extension. 
+
 ### Banner Images Via CSS
 
 Each section uses it own page banner. The banner is defined in a section-specific css file. The overall design includes a variable to define page-specific banners, but this is not currently implemented. 
@@ -91,7 +97,7 @@ The current implementation uses a constantly defined section css file specified 
 
 ## Configuration File
 
-## Template Layout
+## Template Layout File
 
 ## Include Files
 
