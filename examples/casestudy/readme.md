@@ -8,7 +8,7 @@ This case study assumes familiarity with the Templer documentation. It assumes a
 
 In summary:
 
-* The Configuration file manages the overall settings for the website. The configuration file can include global variables, such organization name and paths to folders.
+* The Configuration file manages the overall settings for the website. The configuration file includes global variables, such as organization name and paths to folders.
 * Template layout files use HTML to define the appearance of the website. A website design can use one or more template files. The Village Hiker site uses one.
 * Include files contain information Templer can include on multiple pages. Changing information in an include file changes that information wherever Templer includes the file. Village Hiker uses these files for setting featured articles, external links and advertising content on individual pages.
 * Content files contain articles to display as webpages. These can be written in HTML, Markdown or other formatting languages.  
@@ -20,7 +20,7 @@ The author of this case study is the owner and developer of the Village Hiker we
 
 The original site contained 550-plus pages. The website consisted of text files, images and CSS. It used no javascript.
 
-While most pages of the website looked similar to the user, the HTML and CSS creating the pages suffered from inconsistent patching. Many of the pages used customized CSS files to force the HTML into adaptive and responsive behaviors. Some pages used HTML 4, others used XHTML. More recent ones used HTML 5. The complexity of the site made it difficult to update.
+While most pages of the website looked similar to the user, the pages suffered from inconsistent HTML and CSS. Some pages used HTML 4, others used XHTML. More recent ones used HTML 5. Many of the pages used customized CSS to force the HTML into adaptive and responsive behaviors. The complexity of the site made it difficult to update.
 
 ## Case Study Elements
 
@@ -36,11 +36,11 @@ It briefly highlights the conversion process.
 
 ## Software Versions
 
-The Templer installation uses version 1.2 running on Perl version 5.16.0. Perl was installed on MacOS Sierra using PerlBrew, to avoid using the system Perl.
+The Templer installation uses version 1.2 running on Perl version 5.16.0. Perl was installed on MacOS Sierra using PerlBrew, to avoid using the system Perl. The development environment is Coda 2 and the MacOS Terminal application.
 
 ## Website Status
 
-The Templer-created site went online July 28, 2017. It receives updates multiple times each week. The development environment is Coda 2 and the MacOS Terminal application.
+The Templer-created site went online July 28, 2017. It receives updates multiple times each week. Such an updating schedule would very difficult without using a static-site generator.
 
 ## Website Design
 
