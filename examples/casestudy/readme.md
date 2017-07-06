@@ -4,15 +4,15 @@ This case study describes the conversion of a 10-year-old hand-coded website to 
 
 ![Homepage layout of villagehiker.com showing desktop three-column layout](media/villagehiker-homepage.jpg)
 
+The website uses a basic design employing only HTML and CSS. It contains no javascript.
+
 The layout uses three columns:
 
 * Left column for article links on index.html pages. It contains article text and images on content pages.
 * Middle column for internal and external links to related content.
 * Right column for affiliate advertising.
 
-The site is responsive to desktop, tablet and smart phone browsers in a simple way. The center and right columns move below the left column when the viewport is narrow.
-
-This a basic website design using only HTML and CSS. It contains no javascript.
+The site is responsive to desktop, tablet and smart phone browsers in a simple way. The middle and right columns move below the left column when the viewport is narrow. Images keep their percentage widths regardless of viewport width. Because the images are small in size even for desktop browsers, the site does not use responsive images. 
 
 ## Assumptions
 
