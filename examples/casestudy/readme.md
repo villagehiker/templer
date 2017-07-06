@@ -2,6 +2,8 @@
 
 This case study describes the conversion of a 10-year-old hand-coded website to the Templer static-site generator. The site belongs to [Village Hiker Publishing Company](http://villagehiker.com).
 
+![Homepage layout of villagehiker.com](media/villagehiker-homepage.jpg)
+
 ## Assumptions
 
 This case study assumes familiarity with the Templer documentation. It assumes an understanding of the configuration file, the include files, the template files, the content files and concepts such as variables.
