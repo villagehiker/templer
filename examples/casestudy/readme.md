@@ -6,7 +6,7 @@ This case study describes the conversion of a 10-year-old hand-coded website to 
 
 The converted website uses a basic design employing only HTML and CSS. It contains no javascript.
 
-The layout consists of three columns:
+The layout consists a header, a footer and three columns. The three columns are:
 
 * Left column for article links on index.html pages. It contains article text and images on content pages.
 * Middle column for internal and external links to related content.
@@ -16,9 +16,11 @@ The left column receives its text and images from HTML and Markdown content file
 
 The site is responsive to desktop, tablet and smart phone browsers in a simple way. The middle and right columns move below the left column when the viewport is narrow. Images keep their percentage widths regardless of viewport width. Because the images are small in bandwidth usage, the site does not use responsive images. 
 
-The case study shows the flexibility of Templer. Templer provides fewer features than some others static-site generators—such as Jekyll or Hugo—but is much much much easier to use and require not knowledge of Perl. Jekyll and Hugo assume come knowledge of Ruby and Go, respectively. Templer builds a 350-plus page website in 12 seconds on a 2.9 GHz Intel Core i5 MacBook Pro. Rebuilds take 6 seconds. Copying images to the output folder accounts for the  longer original build time. 
+The case study shows the flexibility of Templer. Templer provides fewer features than some others static-site generators—such as Jekyll or Hugo—but is much much much easier to use and requires no knowledge of Perl. Jekyll and Hugo assume come knowledge of Ruby and Go, respectively.
 
-Village Hiker chooser Templer after evaluating Jekyll, Hugo and several other static-site generators because of its ease-of-use and stability.
+Templer builds a 350-plus page website in 12 seconds on a 2.9 GHz Intel Core i5 MacBook Pro. Rebuilds take 6 seconds. Copying images to the output folder accounts for the  longer first-time build time. 
+
+Village Hiker chose Templer after evaluating Jekyll, Hugo and several other static-site generators. The simplicity, ease-of-use, speed and stability of Templer helped make the decision easy. Templer appears to be bug free. Who knows?
 
 ## Assumptions
 
@@ -34,13 +36,17 @@ To help gain that knowledge, in summary:
 
 ## About the Case Study
 
+### The Old and The New
+
 The author of this case study is the owner and developer of the Village Hiker website. 
 
 The original site contained 550-plus pages. The website consisted of text files, images and CSS. It used no javascript.
 
 While most pages of the website looked similar to the user, the pages suffered from inconsistent HTML and CSS. Some pages used HTML 4, others used XHTML. More recent ones used HTML 5. Many of the pages used customized CSS to force the HTML into adaptive and responsive behaviors. The complexity of the site made it difficult to update.
 
-## Case Study Elements
+The new website contains 350-plus pages, with the removal of individual pages for single photos accounting for almost all of the page reduction.
+
+### Case Study Elements
 
 The case study describes:
 
@@ -52,21 +58,21 @@ The case study describes:
 
 It briefly highlights the conversion process.
 
-## Software Versions
+### Software Versions
 
 The Templer installation uses version 1.2 running on Perl version 5.16.0. Perl was installed on MacOS Sierra using PerlBrew, to avoid using the system Perl. The development environment is Coda 2 and the MacOS Terminal application.
 
-## Website Status
+### Website Status
 
 The Templer-created site went online July 28, 2017. It receives updates multiple times each week. Such an updating schedule would very difficult without using a static-site generator.
 
 ## Website Design
 
-The website uses a structured design. Following the design is important. The design provides consistency for users and supports the use of Templer.
+The new website uses a structured design. The design provides consistency for users and supports the use of Templer.
 
 ### Website Purpose
 
-The Village Hiker website serves as the business card and web presence of a writing and editing services company specializing in content development. The website provides originally-researched and developed content—including documentary-quality photos—on a variety of subjects to illustrate the capabilities of the company. The site contains a small amount of affiliate advertising, plus some Google ads, all separated from the articles.
+The Village Hiker website serves as the business card and web presence of a writing and editing services company specializing in content development. Village Hiker designs website only when necessary. The website provides originally-researched and developed content—including documentary-quality photos—on a variety of subjects to illustrate the capabilities of the company. The site contains a small amount of affiliate advertising, plus some Google ads, all separated from the articles.
 
 ### Website Sections
 
@@ -82,7 +88,7 @@ The About, Research-Writing and Travel sections contain subfolders. Some of thes
 
 The root level contains an index.html file, as do most of the subfolders.
 
-The top level folder and most subfolders also contain css and media subfolders.
+The top-level folder and most subfolders also contain css and media subfolders.
 
 ### Text-File Naming 
 
