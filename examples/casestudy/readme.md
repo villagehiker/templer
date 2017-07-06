@@ -84,20 +84,20 @@ In addition to the root homepage level, the website contains five primary sectio
 
 The About, Research-Writing and Travel sections contain subfolders. Some of these folders contain their own subfolders. For example, the Research-Writing folder contains subfolders on topics such as books, nature and writing skills. And the Travel folder includes subfolders such as Japan, Vietnam and USA. 
 
-The root level contains an index.html file, as do all content-oriented subfolders. The top-level folder and most subfolders also contain css and media subfolders.
+The root level contains a css folder, a media folder and an index.html file, as do all content-oriented subfolders.
 
 ### Text-File Naming 
 
 File naming conventions provide for easily changing the featured articles presented on the index.html pages. The top-level homepage lists a subset of articles from each section and subsection. These subsets change weekly. The subsections also list article subsets on their index.html pages. Each index.html page at the lowest levels of a folder tree contain a list of all articles in its folder. 
 
-Consider travel as an example. The wedsite homepage lists a few articles from each travel subsection—such as Japan, Taiwan and USA—plus a link to the travel section. The travel section index.html lists a few articles from each country, plus links to the country sections. The index.html pages for each country section—such as Vietnam and Travel Gear—list all articles in those sections. 
+Consider travel as an example. The website homepage lists a few articles from each travel subsection—such as Japan, Taiwan and USA—plus a link to the travel section. In turn, the travel section index.html file lists a few articles from each country, plus links to the country sections. In the bottom level subfolders, the index.html pages for each country section—such as Vietnam and Travel Gear—list all articles in those sections. 
 
 The naming pattern is `description-of-content-vh-tt-nn.wgn`, where:
 
-* `description-of-content` identifies the content.
+* `description-of-content` supplies some indication of the file content.
 * `-vh` identifies the file as belonging to the Village Hiker website.
 * `-tt` identifies the type of content, such as as -ts for travel story or -jn for journal notes. This is optional.
-* `-nn` provides a number used to glob files for listing in the indexes. Each content folder contains a maximum of seven files with names ending in a specific number. A maximum of five may be better.
+* `-nn` provides a number used to glob files for listing in the index.html files. Each content folder contains a maximum of seven files with names ending in a specific number. A maximum of five may be better.
 * `wgn` is the file extension for input files. This is a default suggested by the Templer configure file.
 
 An example file name is `chasing-the-vermilion-torii-wakayama-japan-vh-ts-00.wgn`, a travel story about Japan.
@@ -110,9 +110,13 @@ And the glob `vietnamg: file_glob( travel-vietnam/*01.wgn)` includes all Vietnam
 
 ### Banner Images Via CSS
 
-Each section uses it own page banner image. The banner is defined in a section-specific css file. The overall design includes a variable to define page-specific banner images, but this is not currently implemented. 
+Each section uses it own page banner image. The banner to use it identified in the section-specific css file. The design of the website includes a variable to define page-specific banner images, but this is not currently implemented. 
 
-The current implementation uses fixed-named, section-specific css files. Every section of the folder includes a css folder containing the locally-customized css file. The template layout file points to a css file named `custom.css` within a folder named css: `<link rel="stylesheet" href="css/customize.css">`
+The current implementation uses fixed-named, section-specific css files. Every section folder includes a css folder containing the locally-customized css file. The template layout file points to a css file named `custom.css` within a folder named css: `<link rel="stylesheet" href="css/customize.css">`
+
+### Index Page
+
+While the website is small, containing less than 400 pages, it is 10 years old and has some following. The new site design caused the renaming of almost all URLs. To help people find lost webpages, the 404 page points to the site index page. The site index page contains links and descriptions for all index.html pages and all original content pages. It links only the index.html page of two historical documents published on the website.
 
 ## Templer Components 
 ### Configuration File
