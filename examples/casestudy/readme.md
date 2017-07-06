@@ -23,7 +23,7 @@ In summary:
 * The Configuration file manages the overall settings for the website. The configuration file includes global variables, such as organization name and paths to folders.
 * Template layout files use HTML to define the appearance of the website. A website design can use one or more template files. The Village Hiker site uses one.
 * Include files contain information Templer can include on multiple pages. Changing information in an include file changes that information wherever Templer includes the file. Village Hiker uses these files for setting featured articles, external links and advertising content on individual pages.
-* Content files contain articles to display as webpages. These can be written in HTML, Markdown or other formatting languages.  
+* Content files contain articles to display as webpages. These can be written in HTML, Markdown or other formatting languages. 
 * Variables define changeable content used in the template layout and the content pages. Village Hiker uses variables to build its index pages and to define include files to use for each content page. It also uses variables for page-specific information, such as the page title and page description, plus the meta data requested by social media sites.
 
 ## About the Case Study
@@ -104,7 +104,7 @@ And the glob `vietnamg: file_glob( travel-vietnam/*01.wgn)` includes all Vietnam
 
 Each section uses it own page banner image. The banner is defined in a section-specific css file. The overall design includes a variable to define page-specific banner images, but this is not currently implemented. 
 
-The current implementation uses fixed-named, section-specific css files. Every section of the folder includes a css folder containing the locally-customized css file. The template layout file pointes to a file name `custom.css` within a folder named css: `<link rel="stylesheet" href="css/customize.css">`
+The current implementation uses fixed-named, section-specific css files. Every section of the folder includes a css folder containing the locally-customized css file. The template layout file points to a css file named `custom.css` within a folder named css: `<link rel="stylesheet" href="css/customize.css">`
 
 ## Configuration File
 
@@ -116,11 +116,11 @@ The file `templer.cfg` contains website options. The Village Hiker website uses 
 
 The text to the left of the equal sign is a variable name.
 
-Using a path variable as part of an HTML link creates a correct href path from the source page to the destination page. For example, this href link uses the `travelpath` variable for the travel folder: `<a href="<!-- tmpl_var name='travelpath' -->/">Travel</a>`. Templer renders the link correctly for:
+Using a path variable as part of an HTML link creates a correct href path from the source page to the destination page. For example, this href link uses the `travelpath` variable for the travel folder: `<a href="<!-- tmpl_var name='travelpath' -->/">Travel</a>`. Templer renders the link correctly from:
 
 * the root folder: `<a href="travel/">Travel</a>`
 * a subfolder of the root folder: `<a href="../travel/">Travel</a>`
-* a subfolder within another subfolder: : `<a href="../../travel/">Travel</a>`
+* a subfolder of the subfolder: `<a href="../../travel/">Travel</a>`
 
 This makes trivial the creation of menus within a template layout as the paths alway render correctly, regardless of the folder depth within the website. The same applies to links between internal content pages.
 
