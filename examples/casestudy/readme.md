@@ -2,7 +2,15 @@
 
 This case study describes the conversion of a 10-year-old hand-coded website to the Templer static-site generator. The site belongs to [Village Hiker Publishing Company](http://villagehiker.com).
 
-![Homepage layout of villagehiker.com](media/villagehiker-homepage.jpg)
+![Homepage layout of villagehiker.com showing desktop three-column layout](media/villagehiker-homepage.jpg)
+
+The layout uses three columns:
+
+* Left column for article links for index.html files and for articles for content pages.
+* Middle column for internal and external links to related content.
+* Right column for advertising.
+
+The site is responsive to desktop, table and smart phone browsers in a simple way.
 
 ## Assumptions
 
