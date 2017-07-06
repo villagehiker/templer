@@ -40,9 +40,11 @@ The Templer installation uses version 1.2 running on Perl version 5.16.0. Perl w
 
 ## Website Status
 
-The Templer-created site went online July 28, 2017. It receives updates multiple times each week. The development environment is Coda 2 and MacOS Terminal application.
+The Templer-created site went online July 28, 2017. It receives updates multiple times each week. The development environment is Coda 2 and the MacOS Terminal application.
 
 ## Website Design
+
+The website uses a structured design. Following the design is important. The design provides consistency for users.  
 
 ### Website Purpose
 
@@ -70,16 +72,15 @@ File naming conventions provide for easily changing the featured articles presen
 
 Consider travel as an example. The homepage lists a few articles from each travel subsection—such as Japan, Taiwan, USA—plus a link to the travel section. The travel section index.html lists a few articles from each section, plus links to the country sections. The index.html pages for each travel section—such as Vietnam and Travel Gear—list all articles in those sections. 
 
-The naming pattern is:
+The naming pattern is `file-name-related-content-vh-tt-nn.wgn`, where:
 
-file-name-related-content-vh-tt-nn, where:
+* `file-name-related-content` describes the content.
+* `-vh` identifies the file as belonging to the Village Hiker website.
+* `-tt` identifies the type of content, such as as -ts for travel story and -jn for journal notes. This is optional.
+* `-nn` provides a number used to glob files for general selection. The site to limit the a number to five or seven files in a section. 
+* `wgn` is the file extension for input files.
 
-* file-name-related-content describes the content.
-* -vh identifies the file as belonging to the Village Hiker website.
-* -tt identifies the type of content, such as as -ts for travel story and -jn for journal notes. This is optional.
-* -nn provides a number used to glob files for general selection. The site to limit the a number to five or seven files in a section. 
-
-An example is chasing-the-vermilion-torii-wakayama-japan-vh-ts-00, a travel story about Japan.
+An example is `chasing-the-vermilion-torii-wakayama-japan-vh-ts-00.wgn` a travel story about Japan.
 
 The website uses file globs to define the files to include in each index.html file. The name convention support file globing.
 
@@ -87,13 +88,11 @@ For example, the glob `taiwang: file_glob( travel-taiwan/*jn*.wgn)` includes all
 
 And `vietnamg: file_glob( travel-vietnam/*01.wgn)` includes all Vietnam files endng in 01.
 
-The source content files use the `wgn` extension. 
-
 ### Banner Images Via CSS
 
 Each section uses it own page banner. The banner is defined in a section-specific css file. The overall design includes a variable to define page-specific banners, but this is not currently implemented. 
 
-The current implementation uses a constantly defined section css file specified in the template layout.
+The current implementation uses a constantly defined section css file specified in the template layout. To do this, the layout files includes a pointer to the css folder and custom.css files located in each folder where needed: `<link rel="stylesheet" href="css/customize.css">`
 
 ## Configuration File
 
