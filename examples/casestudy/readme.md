@@ -6,11 +6,13 @@ This case study describes the conversion of a 10-year-old hand-coded website to 
 
 The layout uses three columns:
 
-* Left column for article links for index.html files and for articles for content pages.
+* Left column for article links on index.html pages. It contains article text and images on content pages.
 * Middle column for internal and external links to related content.
-* Right column for advertising.
+* Right column for affiliate advertising.
 
-The site is responsive to desktop, table and smart phone browsers in a simple way.
+The site is responsive to desktop, tablet and smart phone browsers in a simple way. The center and right columns move below the left column when the viewport is narrow.
+
+This a basic website design using only HTML and CSS. It contains no javascript.
 
 ## Assumptions
 
