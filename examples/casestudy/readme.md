@@ -118,7 +118,8 @@ Each section uses it own page banner image. The banner is defined in a section-s
 
 The current implementation uses fixed-named, section-specific css files. Every section of the folder includes a css folder containing the locally-customized css file. The template layout file points to a css file named `custom.css` within a folder named css: `<link rel="stylesheet" href="css/customize.css">`
 
-## Configuration File
+## Templer Components 
+### Configuration File
 
 The file `templer.cfg` contains website options. The Village Hiker website uses most of the defaults supplied with Templer. The most obvious exception includes setting many navigation path variables, each pointing pointing to a specific folder. The path variables accommodate the creation of menu links, plus internal links between content files. Examples of path variables include:
 
@@ -136,16 +137,14 @@ Using a path variable as part of an HTML link creates a correct href path from t
 
 This makes trivial the creation of menus within a template layout as the paths alway render correctly, regardless of the folder depth within the website. The same applies to links between internal content pages.
 
-## Template Layout File
+### Template Layout File
 
 The Village Hiker site uses one page template. It works for both index.html pages and website content pages. The template uses both global and page-specific variables to make each page unique. blah blah blah.. 
 
-## Include Files
+### Include Files
 
-## Page Files
+### Page Files
 
-### Index Pages
+#### Index Pages
 
-### Content Pages
-
-
+#### Content Pages
