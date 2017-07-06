@@ -4,14 +4,14 @@ This case study describes the conversion of a 10-year-old hand-coded website to 
 
 ## Assumptions
 
-This case study assumes you are familiar with the Templer documentation. It assumes you have an understanding of the configuration file, the include files, the template files, the content files and concepts such as variables.
+This case study assumes familiarity with the Templer documentation. It assumes an understanding of the configuration file, the include files, the template files, the content files and concepts such as variables.
 
 In summary:
 
-* The Configuration file manages the overall settings for your website. The configuration file can include global variables, such organization name and paths to folders.
+* The Configuration file manages the overall settings for the website. The configuration file can include global variables, such organization name and paths to folders.
 * Template layout files use HTML to define the appearance of the website. A website design can use one or more template files. The Village Hiker site uses one.
 * Include files contain information Templer can includes on multiple pages. Changing information in an include file changes that information wherever Templer includes the file. Village Hiker uses these files for featured articles, external links and advertising content on individual pages.
-* Content files contain articles to display on your webpages. These can be written in HTML, Markdown or other formatting languages.  
+* Content files contain articles to display on as webpages. These can be written in HTML, Markdown or other formatting languages.  
 * Variables define changing content used in the template layout and the content pages. Village Hiker uses variables to build its index pages and to define include files to use for each content page. It also uses them for page-specific information, such as the page title, description and meta data requested by social media sites.
 
 ## About the Case Study
@@ -80,21 +80,35 @@ The naming pattern is `file-name-related-content-vh-tt-nn.wgn`, where:
 * `-nn` provides a number used to glob files for general selection. The site to limit the a number to five or seven files in a section. 
 * `wgn` is the file extension for input files.
 
-An example is `chasing-the-vermilion-torii-wakayama-japan-vh-ts-00.wgn` a travel story about Japan.
+An example is `chasing-the-vermilion-torii-wakayama-japan-vh-ts-00.wgn`, a travel story about Japan.
 
 The website uses file globs to define the files to include in each index.html file. The name convention support file globing.
 
 For example, the glob `taiwang: file_glob( travel-taiwan/*jn*.wgn)` includes all Taiwan journal files in the index.
 
-And `vietnamg: file_glob( travel-vietnam/*01.wgn)` includes all Vietnam files endng in 01.
+And the glob `vietnamg: file_glob( travel-vietnam/*01.wgn)` includes all Vietnam files ending in 01.
 
 ### Banner Images Via CSS
 
 Each section uses it own page banner. The banner is defined in a section-specific css file. The overall design includes a variable to define page-specific banners, but this is not currently implemented. 
 
-The current implementation uses a constantly defined section css file specified in the template layout. To do this, the layout files includes a pointer to the css folder and custom.css files located in each folder where needed: `<link rel="stylesheet" href="css/customize.css">`
+The current implementation uses a constantly defined section css file specified in the template layout. To do this, the layout files includes a pointer to a css folder and `custom.css` files located in each folder or subfolder where appropriate: `<link rel="stylesheet" href="css/customize.css">`
 
 ## Configuration File
+
+The file `templer.cfg` contains website options. The Village Hiker website uses most of the defaults supplied with Templer. The most obvious exception includes setting many navigation paths. The path accommodate the creation of menu links, plus internal links between content files. The menu links are especially helpful. Examples of paths include:
+
+* `travelpath = path_to(travel)`
+* `photospath = path_to(photos)`
+* `writingpath = path_to(research-writing)`
+
+The text to the left of the equal sign is a variable name. Using a variable creates the correct href path from the source page to the destination page. For example, the variable `<a href="<!-- tmpl_var name='travelpath' -->/">Travel</a>` creates a correctly rendered link from:
+
+* the root folder: `<a href="travel/">Travel</a>`
+* a subfolder: `<a href="../travel/">Travel</a>`
+* a subfolder within a subfolder: : `<a href="../../travel/">Travel</a>`
+
+This makes trivial the creation of menus within a template as the path always renders correctly. The same applies to links between internal webpages.
 
 ## Template Layout File
 
