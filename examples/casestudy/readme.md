@@ -114,17 +114,19 @@ The file `templer.cfg` contains website options. The Village Hiker website uses 
 * `photospath = path_to(photos)`
 * `writingpath = path_to(research-writing)`
 
-The text to the left of the equal sign is a variable name. Using a path variable creates a correct href path from the source page to the destination page. For example, the variable `<a href="<!-- tmpl_var name='travelpath' -->/">Travel</a>` creates a correctly rendered link from:
+The text to the left of the equal sign is a variable name.
+
+Using a path variable as part of an HTML link creates a correct href path from the source page to the destination page. For example, this href link uses the `travelpath` variable for the travel folder: `<a href="<!-- tmpl_var name='travelpath' -->/">Travel</a>`. Templer renders the link correctly for:
 
 * the root folder: `<a href="travel/">Travel</a>`
 * a subfolder of the root folder: `<a href="../travel/">Travel</a>`
-* a subfolder within a subfolder: : `<a href="../../travel/">Travel</a>`
+* a subfolder within another subfolder: : `<a href="../../travel/">Travel</a>`
 
-This makes trivial the creation of menus within a template as the paths alway render correctly, regardless of the folder depth within the website. The same applies to links between internal content pages.
+This makes trivial the creation of menus within a template layout as the paths alway render correctly, regardless of the folder depth within the website. The same applies to links between internal content pages.
 
 ## Template Layout File
 
-The Village Hiker site uses one page template. It works for both index.html pages and website content pages. The template uses both global and page-specific variables to make each page unique unique. blah blah blah.. 
+The Village Hiker site uses one page template. It works for both index.html pages and website content pages. The template uses both global and page-specific variables to make each page unique. blah blah blah.. 
 
 ## Include Files
 
