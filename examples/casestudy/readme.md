@@ -108,14 +108,18 @@ The text to the left of the equal sign is a variable name. Using a variable crea
 * a subfolder: `<a href="../travel/">Travel</a>`
 * a subfolder within a subfolder: : `<a href="../../travel/">Travel</a>`
 
-This makes trivial the creation of menus within a template as the path always renders correctly. The same applies to links between internal webpages.
+This makes trivial the creation of menus within a template as the path always renders correctly, regardless of the folder depth within the website. The same applies to links between internal webpages.
 
 ## Template Layout File
 
+The Village Hiker site uses one page template. It works for both index.html pages and website content pages. The template uses both global and page-specific variables to make each page unique unique. It also contains 
+
 ## Include Files
 
-## Content Files
+## Page Files
 
+### Index Pages
 
+### Content Pages
 
 
