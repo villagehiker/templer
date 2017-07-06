@@ -4,23 +4,29 @@ This case study describes the conversion of a 10-year-old hand-coded website to 
 
 ![Homepage layout of villagehiker.com showing desktop three-column layout](media/villagehiker-homepage.jpg)
 
-The website uses a basic design employing only HTML and CSS. It contains no javascript.
+The converted website uses a basic design employing only HTML and CSS. It contains no javascript.
 
-The layout uses three columns:
+The layout consists of three columns:
 
 * Left column for article links on index.html pages. It contains article text and images on content pages.
 * Middle column for internal and external links to related content.
 * Right column for affiliate advertising.
 
-The site is responsive to desktop, tablet and smart phone browsers in a simple way. The middle and right columns move below the left column when the viewport is narrow. Images keep their percentage widths regardless of viewport width. Because the images are small in size even for desktop browsers, the site does not use responsive images. 
+The left column receives its text and images from HTML and Markdown content files merged into the page template when building the website. The middle and right columns receive their content from include files also added during the build.
+
+The site is responsive to desktop, tablet and smart phone browsers in a simple way. The middle and right columns move below the left column when the viewport is narrow. Images keep their percentage widths regardless of viewport width. Because the images are small in bandwidth usage, the site does not use responsive images. 
+
+The case study shows the flexibility of Templer. Templer provides fewer features than some others static-site generators—such as Jekyll or Hugo—but is much much much easier to use and require not knowledge of Perl. Jekyll and Hugo assume come knowledge of Ruby and Go, respectively. Templer builds a 350-plus page website in 12 seconds on a 2.9 GHz Intel Core i5 MacBook Pro. Rebuilds take 6 seconds. Copying images to the output folder accounts for the  longer original build time. 
+
+Village Hiker chooser Templer after evaluating Jekyll, Hugo and several other static-site generators because of its ease-of-use and stability.
 
 ## Assumptions
 
-This case study assumes familiarity with the Templer documentation. It assumes an understanding of the configuration file, the include files, the template files, the content files and concepts such as variables.
+This case study assumes basic-skills familiarity with HTML and CSS, plus the [Templer readme file](https://github.com/skx/templer/blob/master/README.md). It assumes a high-level understanding of the Templer configuration file, the include files, the template layout file, the content files and concepts such as variables.
 
-In summary:
+To help gain that knowledge, in summary:
 
-* The Configuration file manages the overall settings for the website. The configuration file includes global variables, such as organization name and paths to folders.
+* The Configuration file manages the overall settings of the website. The configuration file includes global variables, such as organization name and paths to folders.
 * Template layout files use HTML to define the appearance of the website. A website design can use one or more template files. The Village Hiker site uses one.
 * Include files contain information Templer can include on multiple pages. Changing information in an include file changes that information wherever Templer includes the file. Village Hiker uses these files for setting featured articles, external links and advertising content on individual pages.
 * Content files contain articles to display as webpages. These can be written in HTML, Markdown or other formatting languages. 
