@@ -145,7 +145,7 @@ Global variables go at the end of `templer.cfg` file.They go after the line sayi
 
 All of the HTML for page design goes into the Template Layout File. The default template layout file is `default.layout`.  A template file is a regular HTML file. It contains at least one variable for inserting page content. Optionally, the template can include variables for inserting other items such as page-specific content or include files. Conditional statements can include or exclude content.
 
-The Village Hiker site uses one page template. It works for both index.html pages and website content pages. The template uses both global and page-specific variables to make each page unique. It also contains conditional statements. This is the heart of the Village Hiker website design. Since valid 
+The Village Hiker site uses one page template. It works for both index.html pages and website content pages. The template uses both global and page-specific variables to make each page unique. It also contains conditional statements. This is the heart of the Village Hiker website design. After building the website, several pages are validated at the W3 website. Any errors are corrected in the template file. After rebuilding the site, the validation tests are run again.
 
 
 
