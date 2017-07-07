@@ -10,7 +10,7 @@ The converted website uses a basic design employing only HTML and CSS. It contai
 * Middle column for internal and external links to related content.
 * Right column for affiliate advertising.
 
-The left column receives its text and images from HTML and Markdown content files. Templer merges these into the pages building the website. The middle and right columns receive their content from include files also added during the build. The include files are designed to be page specific, but are currently specific to a section such as `travel` or `research-writing`.
+The left column receives its text and images from HTML and Markdown content files. While Templer supports Textile markup, the Village Hiker site does not use it. Templer merges content files into the pages while building the website. The middle and right columns receive their content from include files added during the build. The include files are designed to be page specific, but are currently specific to a section such as `travel` or `research-writing`.
 
 The site is responsive to desktop, tablet and smart phone browsers in a simple way. The middle and right columns move below the left column when the viewport is narrow. Images keep their percentage widths regardless of viewport width. Because the images are moderate in bandwidth usage, the site does not use responsive images. 
 
@@ -119,6 +119,8 @@ The current implementation uses fixed-named, section-specific css files. Every s
 While the website is small, containing less than 400 pages, it is 10 years old and has some following. The new site design caused the renaming of almost all URLs. To help people find lost webpages, the 404 page points to the site index page. The site index page contains links and descriptions for all index.html pages and all original content pages. It links only the index.html page of two historical documents published on the website.
 
 ## Templer Components 
+
+
 ### Configuration File
 
 The file `templer.cfg` contains website options. The Village Hiker website uses most of the defaults supplied with Templer. The most obvious exception includes setting many navigation path variables, each pointing pointing to a specific folder. The path variables accommodate the creation of menu links, plus internal links between content files. Examples of path variables include:
@@ -129,17 +131,23 @@ The file `templer.cfg` contains website options. The Village Hiker website uses 
 
 The text to the left of the equal sign is a variable name.
 
-Using a path variable as part of an HTML link creates a correct href path from the source page to the destination page. For example, this href link uses the `travelpath` variable for the travel folder: `<a href="<!-- tmpl_var name='travelpath' -->/">Travel</a>`. Templer renders the link correctly from:
+Using a path variable as part of an HTML link creates a correct relative href path from the source page to the destination page. For example, this href link uses the `travelpath` variable for the travel folder: `<a href="<!-- tmpl_var name='travelpath' -->/">Travel</a>`. Templer renders the link correctly from:
 
-* the root folder: `<a href="travel/">Travel</a>`
-* a subfolder of the root folder: `<a href="../travel/">Travel</a>`
-* a subfolder of the subfolder: `<a href="../../travel/">Travel</a>`
+* the root folder as: `<a href="travel/">Travel</a>`
+* a subfolder of the root folder as: `<a href="../travel/">Travel</a>`
+* a subfolder of the subfolder as: `<a href="../../travel/">Travel</a>`
 
-This makes trivial the creation of menus within a template layout as the paths alway render correctly, regardless of the folder depth within the website. The same applies to links between internal content pages.
+This makes trivial the creation of menus from a single template layout as the paths alway render correctly, regardless of the folder depth within the website. The same path  functions works for links between internal content pages.
+
+Global variables go at the end of `templer.cfg` file.They go after the line saying `# Anything below this is a global variable, accessible by name in your templates.`
 
 ### Template Layout File
 
-The Village Hiker site uses one page template. It works for both index.html pages and website content pages. The template uses both global and page-specific variables to make each page unique. blah blah blah.. 
+All of the HTML for page design goes into the Template Layout File. The default template layout file is `default.layout`.  A template file is a regular HTML file. It contains at least one variable for inserting page content. Optionally, the template can include variables for inserting other items such as page-specific content or include files. Conditional statements can include or exclude content.
+
+The Village Hiker site uses one page template. It works for both index.html pages and website content pages. The template uses both global and page-specific variables to make each page unique. It also contains conditional statements. This is the heart of the Village Hiker website design. Since valid 
+
+
 
 ### Include Files
 
